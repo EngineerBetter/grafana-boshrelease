@@ -1,0 +1,14 @@
+---
+platform: linux
+
+inputs:
+- name: grafana-boshrelease
+
+params:
+  AWS_ACCESS_KEY_ID:
+  AWS_SECRET_ACCESS_ID:
+  AWS_DEFAULT_REGION:
+  BUCKET:
+
+run:
+  path: grafana-boshrelease/ci/tasks/create-bucket.sh

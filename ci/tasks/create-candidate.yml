@@ -1,0 +1,11 @@
+---
+platform: linux
+
+inputs:
+  - name: grafana-boshrelease
+
+outputs:
+  - name: release
+
+run:
+  path: grafana-boshrelease/ci/tasks/create-candidate.sh

@@ -3,14 +3,15 @@ platform: linux
 
 inputs:
   - name: grafana-boshrelease
+  - name: final-release
   - name: version
 
 outputs:
-  - name: final-release
+  - name: final-grafana-boshrelease
 
 params:
   AWS_ACCESS_KEY_ID:
   AWS_SECRET_ACCESS_KEY:
 
 run:
-  path: grafana-boshrelease/ci/tasks/create-final.sh
+  path: grafana-boshrelease/ci/tasks/finalize-release.sh

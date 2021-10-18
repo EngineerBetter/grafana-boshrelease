@@ -1,0 +1,13 @@
+---
+platform: linux
+
+inputs:
+- name: grafana-boshrelease
+- name: version
+- name: final-release
+
+outputs:
+- name: release-vars
+
+run:
+  path: grafana-boshrelease/ci/tasks/write-release-vars.sh
