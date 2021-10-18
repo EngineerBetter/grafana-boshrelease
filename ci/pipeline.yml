@@ -1,4 +1,11 @@
 ---
+resource_types:
+- name: terraform
+  type: registry-image
+  source:
+    repository: ljfranklin/terraform-resource
+    tag: latest
+
 resources:
 - name: grafana-boshrelease
   type: git
