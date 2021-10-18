@@ -1,6 +1,6 @@
 ---
 resources:
-- name: grafana-release
+- name: grafana-boshrelease
   type: git
   source:
     uri: git@github.com:EngineerBetter/grafana-boshrelease.git
