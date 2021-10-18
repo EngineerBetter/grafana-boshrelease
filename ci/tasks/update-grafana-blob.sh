@@ -17,7 +17,7 @@ blobstore:
     credentials_source: env_or_profile
 EOF
 
-bosh add-blob "../grafana-binary/grafana-${grafana_version}.linux-amd64.tar.gz" grafana/grafana.tar.gz
+bosh add-blob "../grafana-${grafana_version}.linux-amd64.tar.gz" grafana/grafana.tar.gz
 
 bosh upload-blobs
 
