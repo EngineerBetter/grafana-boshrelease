@@ -6,3 +6,6 @@ processes:
   - -homepath=/var/vcap/packages/grafana
   env:
     HOME: /var/vcap/jobs/grafana/home
+  persistent_disk: true
+  capabilities:
+  - NET_BIND_SERVICE
