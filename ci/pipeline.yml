@@ -152,6 +152,7 @@ jobs:
       trigger: true
       passed:
       - create-buckets
+    - get: grafana-boshrelease-push
     - get: pcfops-image
   - task: create
     file: grafana-boshrelease/ci/tasks/create-candidate.yml
