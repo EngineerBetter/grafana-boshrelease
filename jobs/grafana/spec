@@ -2,7 +2,7 @@
 name: grafana
 
 templates:
-  grafana_ctl: bin/grafana_ctl
+  bpm.yml.erb: config/bpm.yml
   post-start: bin/post-start
   create-update-dashboards.erb: bin/create-update-dashboards
   config.ini.erb: config/config.ini
