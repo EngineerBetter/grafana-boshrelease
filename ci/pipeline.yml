@@ -9,6 +9,7 @@ resource_types:
 resources:
 - name: grafana-boshrelease
   type: git
+  icon: git
   source:
     uri: git@github.com:EngineerBetter/grafana-boshrelease.git
     branch: master
@@ -20,6 +21,7 @@ resources:
 
 - name: grafana-boshrelease-push
   type: git
+  icon: git
   source:
     uri: git@github.com:EngineerBetter/grafana-boshrelease.git
     branch: master
@@ -27,6 +29,7 @@ resources:
 
 - name: grafana-github-release
   type: github-release
+  icon: github
   source:
     owner: EngineerBetter
     repository: grafana-boshrelease
@@ -34,6 +37,7 @@ resources:
 
 - name: grafana-binary-version
   type: github-release
+  icon: github
   source:
     owner: grafana
     repository: grafana
@@ -41,6 +45,7 @@ resources:
 
 - name: version
   type: semver
+  icon: file
   source:
     key: version
     << : &candidate-s3-creds
@@ -51,18 +56,21 @@ resources:
 
 - name: candidate-release
   type: s3
+  icon: aws
   source:
     versioned_file: "grafana-dev-release.tgz"
     << : *candidate-s3-creds
 
 - name: final-release
   type: s3
+  icon: aws
   source:
     regexp: "grafana-final-release-(.*).tgz"
     << : *candidate-s3-creds
 
 - name: ci-tf
   type: terraform
+  icon: terraform
   source:
     terraform_source: grafana-boshrelease/ci/tf/
     backend_type: s3
@@ -80,6 +88,7 @@ resources:
 
 - name: pcfops-image
   type: registry-image
+  icon: dockerhub
   source:
     repository: engineerbetter/pcf-ops
     tag: latest
