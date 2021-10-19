@@ -206,6 +206,9 @@ jobs:
       - create-final-release
       params:
         bump: patch
+    - get: grafana-binary-version
+      passed:
+      - update-blobs
     - get: pcfops-image
   - task: finalize-release
     file: grafana-boshrelease/ci/tasks/finalize-release.yml

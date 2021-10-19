@@ -5,6 +5,7 @@ inputs:
 - name: grafana-boshrelease
 - name: version
 - name: final-release
+- name: grafana-binary-version
 
 outputs:
 - name: release-vars
