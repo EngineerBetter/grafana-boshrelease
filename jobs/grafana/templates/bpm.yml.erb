@@ -4,3 +4,5 @@ processes:
   args:
   - -config=/var/vcap/jobs/grafana/config/config.ini
   - -homepath=/var/vcap/packages/grafana
+  env:
+    HOME: /var/vcap/jobs/grafana/home
