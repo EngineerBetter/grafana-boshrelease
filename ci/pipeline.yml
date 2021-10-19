@@ -88,7 +88,7 @@ resources:
 
 - name: pcfops-image
   type: registry-image
-  icon: dockerhub
+  icon: docker
   source:
     repository: engineerbetter/pcf-ops
     tag: latest
